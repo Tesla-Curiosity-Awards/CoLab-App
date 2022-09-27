@@ -1,0 +1,12 @@
+.icon {
+    width: 55px;
+}
+
+.carousel-item {
+    display: flex;
+    flex-direction: column;
+
+    >* {
+        align-self: center;
+    }
+}
