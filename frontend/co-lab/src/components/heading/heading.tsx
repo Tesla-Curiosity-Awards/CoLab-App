@@ -1,7 +1,3 @@
-import React from 'react'
-
 export function Heading() {
-  return (
-    <div>I am Heading</div>
-  )
+  return <h1>I am Heading</h1>;
 }
