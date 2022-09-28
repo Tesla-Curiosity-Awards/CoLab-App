@@ -1,5 +1,5 @@
 import "./card.scss";
-export const Card = () => {
+export const SetupForm = () => {
   return (
     <section id="card">
       <section id="title">Create Session</section>
@@ -15,7 +15,7 @@ export const Card = () => {
 
           <section className="row">
             <input type="text" name="username" id="username" />
-            <select name="avatar" id="avatar">
+            <select title="avatar" name="avatar" id="avatar">
               <option value="">Style</option>
               <option value="kinetic">🎨</option>
               <option value="default">✍🏻</option>
@@ -27,13 +27,13 @@ export const Card = () => {
           <p className="section-heading">Role</p>
           <section className="radio-group">
             <p>
-              <input type="radio" value="Lead" name="lead" /> Lead
+              <input title="lead" type="radio" value="Lead" name="lead" /> Lead
             </p>
             <p>
-              <input type="radio" value="Dev" name="dev" /> Developer
+              <input title="dev" type="radio" value="Dev" name="dev" /> Developer
             </p>
             <p>
-              <input type="radio" value="Watcher" name="watcher" /> Watcher
+              <input title="watcher" type="radio" value="Watcher" name="watcher" /> Watcher
             </p>
           </section>
         </section>
