@@ -1,3 +1,4 @@
+import { Footer } from "../../components/footer/footer";
 import "./card.scss";
 export const SetupForm = () => {
   return (
@@ -46,6 +47,7 @@ export const SetupForm = () => {
           </button>
         </section>
       </form>
+      <Footer />
     </section>
   );
 };
