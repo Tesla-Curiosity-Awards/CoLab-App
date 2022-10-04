@@ -1,5 +1,4 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
 import { CarouselItem } from '../../components/carousel-item/carousel-item'
 import { Footer } from '../../components/footer/footer'
 import icons from '../../assets/assets.json';
