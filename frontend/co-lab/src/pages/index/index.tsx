@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import { CarouselItem } from '../../components/carousel-item/carousel-item'
 import { Footer } from '../../components/footer/footer'
 import icons from '../../assets/assets.json';
@@ -11,7 +12,9 @@ for (let i in icons) {
     iconList.push(icons[i]);
 }
 export const Index = () => {
-
+    const goToForm = () => {
+        window.location.href='/setup'
+    }
 
     const carouselItems = iconList.map((icon) =>
         <CarouselItem id={icon.image} src={completeIcon} {...icon} />)
@@ -21,7 +24,7 @@ export const Index = () => {
                 <section>
                     <h1 className='heading'>Co-Lab<br /><span className='heading-sub'>Collaborative Learning Lab</span></h1>
                     <p>The lab for coders to collaborate</p>
-                    <button className='btn-main'>Get Started</button>
+                    <button type='submit' className='btn-main' onClick={goToForm}>Get Started</button>
                 </section>
                 <section>
                     <img className='svg' src={homeSVG} alt='home-svg' />
