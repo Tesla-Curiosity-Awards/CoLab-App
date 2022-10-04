@@ -1,8 +1,17 @@
 {
     "competeIcon": {
         "image": "compete",
-        "src": "./icons/compete.png",
         "title": "PLAY & COMPETE",
         "text": "Compete with other teams and have fun"
+    },
+    "partnershipIcon": {
+        "image": "collaborate",
+        "title": "SOLVE PROBLEMS",
+        "text": "Collaborate on coding challenges and upskill together"
+    },
+    "teamIcon": {
+        "image": "team",
+        "title": "LEAD TEAMS",
+        "text": "Facillitate coding sessions and have team building"
     }
 }
