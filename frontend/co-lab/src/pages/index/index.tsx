@@ -1,0 +1,37 @@
+import React from 'react'
+import { CarouselItem } from '../../components/carousel-item/carousel-item'
+import { Footer } from '../../components/footer/footer'
+import icons from '../../assets/assets.json';
+import { completeIcon, homeSVG } from '../../assets/assets';
+import './index.scss'
+
+const iconList: any[] = [];
+for (let i in icons) {
+    //@ts-ignore
+    iconList.push(icons[i]);
+}
+export const Index = () => {
+
+
+    const carouselItems = iconList.map((icon) =>
+        <CarouselItem id={icon.image} src={completeIcon} {...icon} />)
+    return (
+        <>
+            <section className='banner box'>
+                <section>
+                    <h1 className='heading'>Co-Lab<br /><span className='heading-sub'>Collaborative Learning Lab</span></h1>
+                    <p>The lab for coders to collaborate</p>
+                    <button className='btn-main'>Get Started</button>
+                </section>
+                <section>
+                    <img className='svg' src={homeSVG} alt='home-svg' />
+                </section>
+            </section>
+
+            <section className='carousel box'>
+                {carouselItems}
+            </section>
+            <Footer />
+        </>
+    )
+}
