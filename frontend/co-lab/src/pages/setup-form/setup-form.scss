@@ -1,7 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 #card {
     height: 400px;
     width: 30%;
     border: 1px solid #2D3748;
+    margin: auto;
     position: relative;
 
     #title {
@@ -11,6 +16,8 @@
     }
 
     form {
+        padding: 0 2rem;
+
         section .section-heading {
             margin: 0;
             padding: 0;
@@ -20,6 +27,8 @@
             display: flex;
             flex-direction: column;
             align-items: baseline;
+            justify-content: space-around;
+            padding: 0;
         }
 
         .bottom {
@@ -36,11 +45,13 @@
 
                 &.primary {
                     background-color: #FFF;
-                    color: black
+                    font-weight: 600;
+
                 }
 
                 &.secondary {
                     background-color: #2D3748;
+                    color: #FFF;
 
                 }
             }
