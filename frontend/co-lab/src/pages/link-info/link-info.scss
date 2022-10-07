@@ -1,0 +1,21 @@
+.session-info {
+    margin: 10rem auto;
+    width: max-content;
+    display: flex;
+    align-items: center;
+
+    .session-link {
+        font-size: 20px;
+
+        .btn-copy {
+            margin: 1rem;
+            background-color: rgb(12, 188, 188);
+            padding: 1rem;
+            border-radius: 30px;
+
+            &.copied {
+                background-color: rgb(34, 192, 63);
+            }
+        }
+    }
+}
