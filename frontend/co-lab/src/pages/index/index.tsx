@@ -4,7 +4,7 @@ import { Footer } from '../../components/footer/footer'
 import icons from '../../assets/assets.json';
 import { completeIcon, homeSVG } from '../../assets/assets';
 import './index.scss'
-import TopNavBar from '../../components/top-naviagtion-bar/top-nav-bar';
+import TopNavBar from '../../components/top-navigation-bar/top-nav-bar';
 
 const iconList: any[] = [];
 for (let i in icons) {
@@ -13,14 +13,15 @@ for (let i in icons) {
 }
 export const Index = () => {
     const goToForm = () => {
-        window.location.href='/setup'
+        window.location.href = '/setup'
     }
 
     const carouselItems = iconList.map((icon) =>
         <CarouselItem id={icon.image} src={completeIcon} {...icon} />)
+
     return (
-        <>
-        <TopNavBar/>
+        <React.Fragment key="index">
+            <TopNavBar />
             <section className='banner box'>
                 <section>
                     <h1 className='heading'>Co-Lab<br /><span className='heading-sub'>Collaborative Learning Lab</span></h1>
@@ -36,6 +37,6 @@ export const Index = () => {
                 {carouselItems}
             </section>
             <Footer />
-        </>
+        </React.Fragment>
     )
 }
