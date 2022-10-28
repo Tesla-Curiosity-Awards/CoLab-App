@@ -4,6 +4,7 @@ import { Footer } from '../../components/footer/footer'
 import icons from '../../assets/assets.json';
 import { completeIcon, homeSVG } from '../../assets/assets';
 import './index.scss'
+import TopNavBar from '../../components/top-naviagtion-bar/top-nav-bar';
 
 const iconList: any[] = [];
 for (let i in icons) {
@@ -19,6 +20,7 @@ export const Index = () => {
         <CarouselItem id={icon.image} src={completeIcon} {...icon} />)
     return (
         <>
+        <TopNavBar/>
             <section className='banner box'>
                 <section>
                     <h1 className='heading'>Co-Lab<br /><span className='heading-sub'>Collaborative Learning Lab</span></h1>
