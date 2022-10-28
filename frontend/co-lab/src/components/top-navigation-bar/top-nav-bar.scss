@@ -2,14 +2,15 @@ nav {
     display: flex;
     justify-content: space-between;
     box-shadow: 0 8px 8px -4px rgba(0, 0, 0, 0.8);
-    padding: 0 15px 0 0;
     width: 100%;
+
     .left .logo {
         width: 150px;
     }
 
     .right {
         min-width: 15%;
+        padding: 0 25px;
 
         .nav-list {
             display: flex;
