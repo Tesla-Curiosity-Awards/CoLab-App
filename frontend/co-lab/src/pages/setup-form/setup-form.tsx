@@ -27,11 +27,14 @@ export const SetupForm = () => {
 
               <section className="row">
                 <input type="text" name="username" id="username" />
-                <select title="avatar" name="avatar" id="avatar">
-                  <option value="">Style</option>
-                  <option value="kinetic">🎨</option>
-                  <option value="default">✍🏻</option>
-                  <option value="visual">👀</option>
+                <select title="avatar" name="avatar" id="avatar" placeholder="Avatar">
+                  <option value="" hidden>Avatar</option>
+                  <option value="coffee">☕</option>
+                  <option value="clown">🤡</option>
+                  <option value="writer">✍🏻</option>
+                  <option value="owl">🦉</option>
+                  <option value="observer">👀</option>
+                  <option value="gamer">🎮</option>
                 </select>
               </section>
             </section>
