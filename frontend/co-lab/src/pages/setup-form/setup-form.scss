@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 #card {
     height: 400px;
@@ -8,6 +6,7 @@
     border: 1px solid #2D3748;
     margin: 10rem auto;
     position: relative;
+    
 
     #title {
         padding: 20px;
