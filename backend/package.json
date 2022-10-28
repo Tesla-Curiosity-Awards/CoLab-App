@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "nodemon src/app.js"
+    "server": "nodemon src/app.js",
+    "dev": "concurrently --kill-others-on-fail \"npm server\" \"npm frontend\""
   },
   "dependencies": {
     "dotenv": "^16.0.2",
