@@ -16,18 +16,15 @@ export const SetupForm = () => {
       <section id="card">
         <section id="title">Create Session</section>
         <Formik initialValues={initialValues} onSubmit={() => { }}>
-          <form
-            
-            onSubmit={(e) => { e.preventDefault()}}
-          >
-            <section className="user-sect">
+          <form onSubmit={(e) => { e.preventDefault() }}>
+            <section id="user-sect">
               <label className="section-heading" htmlFor="username">
                 Username:
               </label>
 
               <section className="row">
                 <input type="text" name="username" id="username" />
-                <select title="avatar" name="avatar" id="avatar" placeholder="Avatar">
+                <select title="avatar" name="avatar" id="avatar">
                   <option value="" hidden>Avatar</option>
                   <option value="coffee">☕</option>
                   <option value="clown">🤡</option>
@@ -41,15 +38,13 @@ export const SetupForm = () => {
             <section id="role-sect">
               <p className="section-heading">Role</p>
               <section className="radio-group">
-                <p>
-                  <input title="lead" type="radio" value="Lead" name="lead" /> Lead
-                </p>
-                <p>
-                  <input title="dev" type="radio" value="Dev" name="dev" /> Developer
-                </p>
-                <p>
+                <label htmlFor="lead"> <input title="lead" type="radio" value="Lead" name="lead" /> Lead
+                </label>
+                <label htmlFor="dev"> <input title="dev" type="radio" value="Dev" name="dev" /> Developer
+                </label>
+                <label htmlFor="watcher">
                   <input title="watcher" type="radio" value="Watcher" name="watcher" /> Watcher
-                </p>
+                </label>
               </section>
             </section>
             <section className="bottom">
