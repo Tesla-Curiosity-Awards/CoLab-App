@@ -2,7 +2,8 @@ import React from 'react'
 import { CarouselItem } from '../../components/carousel-item/carousel-item'
 import { Footer } from '../../components/footer/footer'
 import icons from '../../assets/assets.json';
-import { completeIcon, homeSVG } from '../../assets/assets';
+import {images} from '../../assets/index';
+
 import './index.scss'
 import TopNavBar from '../../components/top-navigation-bar/top-nav-bar';
 
@@ -15,9 +16,9 @@ export const Index = () => {
     const goToForm = () => {
         window.location.href = '/setup'
     }
-
-    const carouselItems = iconList.map((icon) =>
-        <CarouselItem id={icon.image} src={completeIcon} {...icon} />)
+    
+    const carouselItems = iconList.map((icon,i=0) =>
+        <CarouselItem id={icon.image} src={Object.values(images)[i]} {...icon} />)
 
     return (
         <React.Fragment key="index">
@@ -29,7 +30,7 @@ export const Index = () => {
                     <button type='submit' className='btn-main' onClick={goToForm}>Get Started</button>
                 </section>
                 <section>
-                    <img className='svg' src={homeSVG} alt='home-svg' />
+                    <img className='svg' src={images.homeSVG} alt='home-svg' />
                 </section>
             </section>
 
