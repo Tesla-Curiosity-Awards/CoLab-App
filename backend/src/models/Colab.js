@@ -1,6 +1,7 @@
 const Sequelize = require("sequelize");
 const db = require("../config/db.config");
 
+//CREATE
 const User = db.define(
   "users",
   {
@@ -39,4 +40,59 @@ const Avatar = db.define(
   },
   { timestamps: false }
 );
-module.exports = { User, Avatar };
+
+const Role = db.define(
+  "Roles",
+  {
+    id: {
+      type: Sequelize.INTEGER,
+      autoIncrement: true,
+      primaryKey: true,
+    },
+    role: {
+      type: Sequelize.STRING,
+    },
+  },
+  { timestamps: false }
+);
+
+const Session = db.define(
+  "Sessions",
+  {
+    id: {
+      type: Sequelize.INTEGER,
+      autoIncrement: true,
+      primaryKey: true,
+    },
+    url: {
+      type: Sequelize.STRING,
+    },
+  },
+  { timestamps: false }
+);
+
+const Content = db.define(
+  "Content",
+  {
+    id: {
+      type: Sequelize.INTEGER,
+      autoIncrement: true,
+      primaryKey: true,
+    },
+  },
+  { timestamps: false }
+);
+
+const Topic = db.define(
+  "Topics",
+  {
+    id: {
+      type: Sequelize.INTEGER,
+      autoIncrement: true,
+      primaryKey: true,
+    },
+  },
+  { timestamps: false }
+);
+
+module.exports = { User, Avatar, Role, Session, Content, Topic };
