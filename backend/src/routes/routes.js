@@ -135,6 +135,7 @@ router.post("/topics", async (req, res) => {
   console.log(topic, "topic added!!!");
   res.sendStatus(200);
 });
+
 //____________________ Content  ____________________
 router.get("/content", async (req, res, err) => {
   const result = err
@@ -176,6 +177,7 @@ router.post("/content", async (req, res) => {
   console.log(content, "content added!!!");
   res.sendStatus(200);
 });
+
 //____________________ Users  ____________________
 router.get("/users", async (req, res, err) => {
   const result = err
@@ -217,6 +219,7 @@ router.post("/users", async (req, res) => {
   console.log(user, "user added!!!");
   res.sendStatus(200);
 });
+
 //____________________ Sessions  ____________________
 router.get("/session", async (req, res, err) => {
   const result = err
