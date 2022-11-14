@@ -1,9 +1,8 @@
 const Sequelize = require("sequelize");
 const db = require("../config/db.config");
 
-//CREATE
 const User = db.define(
-  "users",
+  "Users",
   {
     id: {
       type: Sequelize.INTEGER,
@@ -64,7 +63,7 @@ const Session = db.define(
       autoIncrement: true,
       primaryKey: true,
     },
-    url: {
+    key: {
       type: Sequelize.STRING,
     },
   },
@@ -79,6 +78,15 @@ const Content = db.define(
       autoIncrement: true,
       primaryKey: true,
     },
+    topicID: {
+      type: Sequelize.INTEGER,
+    },
+    question: {
+      type: Sequelize.STRING,
+    },
+    answer: {
+      type: Sequelize.STRING,
+    },
   },
   { timestamps: false }
 );
@@ -90,6 +98,9 @@ const Topic = db.define(
       type: Sequelize.INTEGER,
       autoIncrement: true,
       primaryKey: true,
+    },
+    topic: {
+      type: Sequelize.STRING,
     },
   },
   { timestamps: false }
